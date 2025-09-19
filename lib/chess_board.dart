@@ -10,7 +10,6 @@ class ChessBoard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1,
       child: FittedBox(
-        fit: BoxFit.contain,
         child: SizedBox(
           width: 400,
           height: 400,
@@ -36,7 +35,6 @@ class _Rank extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 8 / 1,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           for (int fileIndex = 1; fileIndex <= 8; fileIndex++)
             _Square(rankIndex: index, fileIndex: fileIndex)
@@ -63,7 +61,7 @@ class _Square extends StatelessWidget {
     );
 
     return AspectRatio(
-      aspectRatio: 1 / 1,
+      aspectRatio: 1,
       child: Container(
         padding: EdgeInsets.all(4),
         color: _isDark() ? ChessColors.darkSquare : ChessColors.lightSquare,
